@@ -1,0 +1,158 @@
+<%@ Master Language="VB" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+    
+    Protected Function buildMenu(ByVal sender As String) As String
+        
+        'Dim mySqlConnection2 As SqlConnection
+        'Dim mySqlCommand2 As SqlCommand
+        'Dim myReader2 As SqlDataReader
+        'Dim strLastUpdate As String
+        'mySqlConnection2 = New SqlConnection(ConfigurationManager.ConnectionStrings("ConnectionString1").ConnectionString)
+        'mySqlCommand2 = New SqlCommand("Select * From LastUpdated", mySqlConnection2)
+        'mySqlConnection2.Open()
+        'myReader2 = mySqlCommand2.ExecuteReader()
+        'If myReader2.HasRows = True Then
+        '    Do While myReader2.Read
+        '        strLastUpdate = myReader2("dat")
+        '        lblLastUpdate.Text = strLastUpdate
+        '    Loop
+        'End If
+        'mySqlConnection2.Close()
+    
+    
+        Dim str As String
+        Dim str1 As String
+        Dim Mystr = ""
+        str1 = ""
+        str = "select * from menu where "
+        Dim abc = Session("user_role")
+        If Not abc = "" Then
+            If abc = "1" Then
+                If str1 = "" Then
+                    str1 = " id='1' or id='2' or id='3' or id='4' or id='5' or id='7' or id='6' or id='8'"
+                Else
+                    str1 += " or id='1' or id='2' or id='3' or id='4' or id='5' or id='7' or id='6' or id='8'"
+                End If
+            End If
+            If abc = "2" Then
+                If str1 = "" Then
+                    str1 = " id='19' or id='20' or id='21' or id='24' or id='5'"
+                Else
+                    str1 += " or id='19' or id='20' or id='21' or id='24' or id='5'"
+                End If
+            End If
+            If abc = "3" Then
+                If str1 = "" Then
+                    str1 = " id='9' or id='10' or id='11' or id='12' or id='13'"
+                Else
+                    str1 += " or id='9' or id='10' or id='11' or id='12' or id='13'"
+                End If
+            End If
+            If abc = "4" Then
+                If str1 = "" Then
+                    str1 = " id='14' or id='15' or id='16' or id='17' or id='23' or id='25' or id='13'"
+                Else
+                    str1 += " or id='14' or id='15' or id='16' or id='17' or id='23' or id='25' or id='13'"
+                End If
+            End If
+            
+            If abc = "5" Then
+                If str1 = "" Then
+                    str1 = " id='29' or id='28' or id='16' or id='26' or id='27' or id='13'"
+                Else
+                    str1 += " or id='29' or id='28' or id='16' or id='26' or id='27' or id='13'"
+                End If
+            End If
+            
+            If abc = "6" Then
+                If str1 = "" Then
+                    str1 = " id='21' or id='13'"
+                Else
+                    str1 += " or id='21' or id='13'"
+                End If
+            End If
+            
+            str1 = str1 + " order by menuorder"
+            
+            Dim i = 0
+            Dim mySqlConnection As SqlConnection
+            Dim mySqlCommand As SqlCommand
+            Dim myReader As SqlDataReader
+            str += str1
+
+            mySqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("ConnectionString1").ConnectionString)
+            mySqlCommand = New SqlCommand(str, mySqlConnection)
+            mySqlConnection.Open()
+            myReader = mySqlCommand.ExecuteReader()
+            If myReader.HasRows = True Then
+                Do While myReader.Read
+                    Mystr += "<td><a href='" & myReader("WebPage") & "' class='whitenoul' valign='top'>" & myReader("ItemName") & "</a></td><td valign='middle'> <img src='images/whiteline.png' /> </td>"
+                    i = i + 1
+                Loop
+            End If
+            mySqlConnection.Close()
+            If Not Mystr = "" Then
+                Mystr += "<td><a href='help.aspx' class='whitenoul' valign='top'>Help</a></td><td valign='middle'> <img src='images/whiteline.png' /></td>"
+                Mystr += "<td><a href='training.aspx'  class='whitenoul' valign='top'>Website Usage<br>Training</td><td valign='middle'> <img src='images/whiteline.png' /></td>"
+                Mystr += "<td><a href='ContactUs.aspx'  class='whitenoul' valign='top'>Contact<br>Us</a></td>"
+            End If
+        End If
+       
+        Return (Mystr)
+        
+    End Function
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>FCSD PCS Claims Analysis and Report Tool</title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <center>
+     <div id="wrapper">
+        <div id="header">
+        <table height="100%" width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr align="right" valign="top">
+				<td	>
+				 
+				<asp:Label ID="Session_Name" runat="server" Text="" visible="false" CssClass="MediumWhiteText"></asp:Label>
+				</td>
+			</tr>
+			<tr align="right" valign="bottom">
+				<td> <a href="default.aspx" id="Session_link" runat="server" visible="False" class='white'>Logout</a> 
+			</td>
+				</tr>
+				</table>
+				</div>
+				<table width="100%" border="0" cellpadding="5" cellspacing="0" style="background:#339966;color:#FFFFFF;font-family:verdana;font-size:10px;line-height:20px;font-weight:bold">
+          <tr>
+            <td valign="middle" align="center">
+                <table cellpadding="3"><tr align="center"><%=buildMenu("a")%></tr></table>
+            </td>
+          </tr>
+          </table>
+     <br /><div align="right" class="LargeBlackText"></div>
+				<center><br />
+    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+        </center>
+        <br/>
+		
+		<div id="footer" style=color:#000>
+		
+    		<br/>
+			<div class="GrayText">Copyright © Ford Motor Company. All Rights Reserved.</div>
+		</div>
+    </div>
+        
+     </center>   
+</form>
+</body>
+</html>

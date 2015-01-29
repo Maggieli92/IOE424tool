@@ -1,0 +1,327 @@
+﻿body 
+{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	font-family:Arial, Helvetica, Verdana sans-serif;
+	font-size:12px;
+	position: relative;
+	background-color:#0035a7;
+	text-align:center;
+}
+#wrapper
+{
+    width:948px;
+    height:100%;
+    background-color:#fff;
+    border:0px solid #eee;
+	position:relative;
+	text-align:center;
+	color:#000000;
+}
+
+#header
+{
+	background:url(images/Header.jpg);
+	width:938px;
+	height:78px;
+	text-align:right;
+	padding:5px;
+}
+img
+{  border-style: none;
+}
+.DelButton
+{
+    background:#FFF;
+    height:20px;
+    font-family:Arial, Helvetica, Verdana 10px;
+    border:0px;
+    color:Red;
+}
+#footer
+{
+	text-align:center;
+	line-height:20px;
+	padding:5px;
+}
+#ErrorBox
+{
+	width:500px;
+	text-align:left;
+	padding:5px;
+	padding-left:20px;
+}
+.Textbox
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    height:18px;
+    font-size:11px;
+    border:1px solid #000;
+}
+.Normaltext
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:White;    
+}
+.GrayText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:11px;
+    font-weight:normal;
+    color:Gray;    
+}
+.LargeHeadlineText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:20px;
+    font-weight:bold;
+    color:Black;    
+}
+.LargeWhiteText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:16px;
+    font-weight:bold;
+    color:White;    
+}
+.LargerWhiteText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:40px;
+    font-weight:bold;
+    color:Black;    
+}
+
+.mGrid {   
+    width: 100%;   
+    background-color: #fff;   
+    margin: 5px 0 10px 0;   
+    border: solid 1px #525252;   
+    border-collapse:collapse;   
+    
+}  
+.mGrid td {   
+    padding: 2px;   
+    border: solid 1px #c1c1c1;   
+    color: #000;   
+    
+}  
+.mGrid th {   
+    padding: 4px 2px;   
+    color: #fff;   
+    background: #339966 ;   
+    border-left: solid 1px #525252;   
+    font-size: 16px;   
+    
+}  
+.mGrid .alt { background: #fcfcfc ; }  
+.mGrid .pgr { background: #339966 ;}  
+.mGrid .pgr table { margin: 5px 0; } 
+
+.mGrid .pgr td 
+{
+    text-align:center;
+    border-width: 0;   
+    padding: 0 6px;   
+    border-left: solid 1px #fff;   
+    font-weight: bold;   
+    color: #fff;   
+    line-height: 20px; 
+    font-size:20px;  
+    text-align:center;
+   
+ }     
+.mGrid .pgr a { color: #fff; text-decoration: underline; font-size:16px;  }  
+.mGrid .pgr a:hover { color: #fff; text-decoration: none; } 
+
+
+
+.MediumWhiteText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:White;    
+}
+.SmallBlackText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:10px;
+    font-weight:normal;
+    color:Black;    
+}
+.SmallMediumBlackText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:11px;
+    font-weight:normal;
+    color:Black;    
+}
+.MediumBlackText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:12px;
+    font-weight:normal;
+    color:Black;    
+}
+.MediumBlackTextBold
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:Black;    
+}
+.LargeBlackText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:14px;
+    font-weight:normal;
+    color:Black;    
+}
+.MediumRedText
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:Red;    
+}
+
+.ErrorMsg
+{
+    font-fAMILY:Arial, Helvetica, Verdana;
+    font-size:12px;
+    line-height:18px;
+    color:Red;    
+}
+a:link {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 11px;
+	color: #000;
+	text-decoration: underline;
+}
+a:visited {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 11px;
+	color: #000;
+	text-decoration: underline;
+}
+
+a.Medium:link {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-decoration: underline;
+}
+a.Medium:visited {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-decoration: underline;
+}
+
+a.white:link {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 16px;
+	color: White;
+	text-decoration: underline;
+}
+a.white:visited {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 16px;
+	color: White;
+	text-decoration: underline;
+}
+a.whitebold:link {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 16px;
+	color: White;
+	font-weight: bold;
+	text-decoration: underline;
+}
+a.whitebold:visited {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 16px;
+	color: White;
+	font-weight: bold;
+	text-decoration: underline;
+}
+a.whitenoul:link {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 15px;
+	color: White;
+	text-decoration: none;
+}
+a.whitenoul:visited {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 15px;
+	color: White;
+	text-decoration: none;
+}
+a.blue:link {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 16px;
+	color: Blue;
+	text-decoration: underline;
+}
+a.blue:visited {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 16px;
+	color: Blue;
+	text-decoration: underline;
+}
+a.bluemedium:link {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+	color: Blue;
+	text-decoration: underline;
+}
+a.bluemedium:visited {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+	color: Blue;
+	text-decoration: underline;
+}
+a.redmedium:link {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+	color: Red;
+	text-decoration: none;
+	Font-Weight:Bold
+}
+a.redmedium:visited {
+	
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 12px;
+	color: Red;
+	text-decoration: none;
+	Font-Weight:Bold
+}
+#msgbox1
+{
+    position:absolute;
+    border:1px solid #000;
+    background-color:#000;
+    z-index:1;
+    width:400px;
+    padding:5px;
+    left:250px;
+    top:200px;
+}
